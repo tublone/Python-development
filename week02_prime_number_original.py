@@ -15,7 +15,7 @@ else:
         if number % i == 0:
             is_prime_number = False # Remove addition operation
             break  # Escape from the loop when the first divisor is found, improving performance when the input value is not a prime number
-        print(i, end=" ")
+        #print(i, end=" ")
         i = i + 1
 
 
