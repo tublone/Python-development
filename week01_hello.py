@@ -9,12 +9,14 @@ if number < 2:
    count = 1
 else:
     count = 0
-    for i in range(1, number+1):
+    for i in range(2, number):
         if number % i == 0:
            count = count + 1
+            break  # Escape from the loop when the first divisor is found, improving performance when the input value is not a prime number
+        print(i, end=" ")
 
 
-if count == 2:
+if count == 0:
     print(f"{number} is prime number")
 else:
     print(f"{number} is not prime number")
