@@ -9,11 +9,14 @@ is_prime_number = True
 if number < 2:
    is_prime_number = False
 else:
-     for i in range(2, number):
+     #for i in range(2, number):
+     i = 2
+     while i < number: # for to while
         if number % i == 0:
             is_prime_number = False # Remove addition operation
             break  # Escape from the loop when the first divisor is found, improving performance when the input value is not a prime number
         print(i, end=" ")
+        i = i + 1
 
 
 if is_prime_number: #Remove comparison operators
