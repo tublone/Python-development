@@ -1,20 +1,17 @@
-number = int(input("Input number : "))
+start = int(input("Input initial number : "))
+end = int(input("Input final number : "))
 
-is_prime_number = True
-if number < 2:
-   is_prime_number = False
-else:
-     #for i in range(2, number):
-     i = 2
-     while i*i <= number: # reduce loop operation
-        if number % i == 0:
-            is_prime_number = False # Remove addition operation
-            break  # Escape from the loop when the first divisor is found, improving performance when the input value is not a prime number
-        #print(i, end=" ")
-        i = i + 1
+for k in range(start, end+1):
+       is_prime_number = True
+       if k < 2:
+            is_prime_number = False
+       else:
+           i = 2
+           while i*i <= k:
+               if k % i == 0:
+                    is_prime_number = False
+                    break
+                i = i + 1
+            if is_prime_number: print(k, end=' ')
 
 
-if is_prime_number: #Remove comparison operators
-    print(f"{number} is prime number")
-else:
-    print(f"{number} is not prime number")
