@@ -1,8 +1,6 @@
-test = input("Input start number : ").split()
-#print(int(test[0], int(test[1])))
 
-start = int(test[0])
-end = int(test[1])
+start, end = list(map(int, input("Input number : ").split()))
+
 
 for k in range(start, end+1):
     is_prime_number = True
