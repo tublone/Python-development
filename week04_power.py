@@ -6,9 +6,11 @@ def power(b, e) -> int:
     :return: Power Result Value
     """
     result = 1
-    for i in range(e):
+    for _ in range(e):
         result = result * b
     return result
+
+
 
 base, exponent = map(int, input("Input base & exponent number : ").split())
 print(f"{base}^{exponent} = {base**exponent}" )  # operator
