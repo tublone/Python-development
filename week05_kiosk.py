@@ -25,7 +25,7 @@ while True:
         quantity[2] += 1
     else:
         print(f"Menu number {menu} you ordered does not exist. Please choose from the menu")
-print(f"{beverage[0]} X{quantity[0]}")
-print(f"{beverage[1]} X{quantity[1]}")
-print(f"{beverage[2]} X{quantity[2]}")
-print(f"Your order has been accepted. The total amount is {total_price} won.")
+print(f"{beverage[0]}\n\t{prices[0]}\tX{quantity[0]}\t{prices[0] * quantity[0]}")
+print(f"{beverage[1]}\n\t{prices[1]}\tX{quantity[1]}\t{prices[1] * quantity[1]}")
+print(f"{beverage[2]}\n\t{prices[2]}\tX{quantity[2]}\t{prices[2] * quantity[2]}")
+print(f"The total amount is {total_price} won.")
