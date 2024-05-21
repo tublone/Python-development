@@ -23,12 +23,20 @@ def select_menu(key):
 
 
 menu_lists = ""
+
+beverage = list()
+for k in beverage_prices_quantity:
+    beverage.append(k)
+
+for i in range(len(beverage_prices_quantity)):
+    menu_lists = menu_lists + f"{i+1}) {beverage[i]} {beverage_prices_quantity[beverage[i]][0]} won  "
+menu_lists = menu_lists + f"{len(beverage)+1}) End order "
 # for m in range(len(beverage)):
-i = 1
-for k, v in beverage_prices_quantity.items():
-    menu_lists = menu_lists + f"{i}) {k} {v[0]} won  "
-    i += 1
-menu_lists = menu_lists + f"{i}) End order : "
+# i = 1
+# for k, v in beverage_prices_quantity.items():
+#    menu_lists = menu_lists + f"{i}) {k} {v[0]} won  "
+#    i += 1
+# menu_lists = menu_lists + f"{i}) End order : "
 
 
 while True:
