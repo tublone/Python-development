@@ -3,8 +3,10 @@
 
 # beverage = ["black coffee", "latte", "iced tea"]
 # prices = [1500, 2500, 2300]
-beverage_prices = {'black coffee': 1500, 'latte': 2500, 'iced tea': 2300}
-quantity = [0, 0, 0]
+beverage_prices = {'black coffee': [1500, 0],
+                   'latte': [2500, 0],
+                   'iced tea': [2300, 0]
+                   }
 total_price = 0
 
 def select_menu(index):
