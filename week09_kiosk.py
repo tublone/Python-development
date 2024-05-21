@@ -17,9 +17,9 @@ def select_menu(key):
     """
 
     global total_price
-    print(f"You ordered {key}. The price is {beverage_prices_quantity[key][0]} won.")
-    total_price += beverage_prices_quantity[key][0]
-    beverage_prices_quantity[key][1] += 1
+    print(f"You ordered {key}. The price is {beverage_prices_quantity.get(key)[0]} won.")
+    total_price += beverage_prices_quantity.get(key)[0]
+    beverage_prices_quantity.get(key)[1] += 1
 
 
 menu_lists = ""
