@@ -9,17 +9,17 @@ beverage_prices_quantity = {'black coffee': [1500, 0],
                    }
 total_price = 0
 
-def select_menu(index):
+def select_menu(key):
     """
     display, calculate total price and count quantity
-    :param index: index of list
+    :param key: key of dictionary
     :return: None
     """
 
     global total_price
-    print(f"You ordered {beverage[index]}. The price is {prices[index]} won.")
-    total_price += prices[index]
-    quantity[index] += 1
+    print(f"You ordered {key}. The price is {beverage_prices_quantity[key][0]} won.")
+    total_price += beverage_prices_quantity[key][0]
+    beverage_prices_quantity[key][0] += 1
 
 
 menu_lists = ""
@@ -37,11 +37,11 @@ while True:
         print("Your order has been accepted.")
         break
     elif menu == '1':
-        select_menu(0)
+        select_menu('black coffee')
     elif menu == '2':
-        select_menu(1)
+        select_menu('latte')
     elif menu == '3':
-        select_menu(2)
+        select_menu('iced tea')
     else:
         print(f"Menu number {menu} you ordered does not exist. Please choose from the menu")
 
