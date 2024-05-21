@@ -1,10 +1,24 @@
 # Incheon Science High School CAFE
 # Black Coffee 1500, Latte 2500
 
-beverage = ["Black Coffee", "Latte", "Iced Tea"]
-prices = [1500, 2500, 2300]
+# beverage = ["black coffee", "latte", "iced tea"]
+# prices = [1500, 2500, 2300]
+beverage_prices = {'black coffee': 1500, 'latte': 2500, 'iced tea': 2300}
 quantity = [0, 0, 0]
 total_price = 0
+
+def select_menu(index):
+    """
+    display, calculate total price and count quantity
+    :param index: index of list
+    :return: None
+    """
+
+    global total_price
+    print(f"You ordered {beverage[index]}. The price is {prices[index]} won.")
+    total_price += prices[index]
+    quantity[index] += 1
+
 
 menu_lists = ""
 for m in range(len(beverage)):
@@ -18,17 +32,11 @@ while True:
         print("Your order has been accepted.")
         break
     elif menu == '1':
-        print("You ordered Black Coffee. The price is 1500 won.")
-        total_price = total_price + prices[0]
-        quantity[0] += 1
+        select_menu(0)
     elif menu == '2':
-        print("You ordered Cafe Latte. The price is 2500 won.")
-        total_price += prices[1]
-        quantity[1] += 1
+        select_menu(1)
     elif menu == '3':
-        print("You ordered Iced Tea. The price is 2300 won.")
-        total_price += prices[2]
-        quantity[2] += 1
+        select_menu(2)
     else:
         print(f"Menu number {menu} you ordered does not exist. Please choose from the menu")
 
